@@ -118,3 +118,12 @@ server {
         }
 }
 ```
+
+
+# Stop after 100m
+add this line to `/etc/nginx/nginx.conf` at the end of `http` part
+```
+client_max_body_size 100M;
+```
+![image](https://user-images.githubusercontent.com/36403983/182473440-a45c43df-3762-450c-bfda-d0b235c92e3f.png)
+
