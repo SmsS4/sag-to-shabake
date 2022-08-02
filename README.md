@@ -1,5 +1,10 @@
 # sag-to-shabake
 
+# block ip
+```
+iptables -I INPUT -s xxx.xxx.xxx.xxx -j DROP
+```
+
 # find ip connected to server
 ```
 netstat -ntu|awk '{print $5}'|cut -d: -f1 -s|sort|uniq -c|sort -nk1 -r\n
