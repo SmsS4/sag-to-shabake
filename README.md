@@ -96,7 +96,6 @@ with open("/var/log/nginx/access.log", "r") as f:
 for ip in all_data:
     l = 0
     r = 0
-    print(ip)
     for r in range(len(all_data[ip])):
         while (all_data[ip][r]['dateandtime'] - all_data[ip][l]['dateandtime']).total_seconds() > y:
             l += 1
