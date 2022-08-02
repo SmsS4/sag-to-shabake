@@ -55,8 +55,8 @@ import collections
 import datetime
 import re
 
-x = 1
-y = 60 * 5
+x = 50
+y = 10
 
 months = [
     "Jan",
